@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Erice 2018</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/erice2018.css">
+    <link rel="stylesheet" href="css/katex.css">
+
+    <script src="js/katex.js"></script>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      structure-view {
+      width:  100vw;
+      height: 100vh;
+      }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section class="intro">
+	  <h1 class="intro__title">Coarse Graining</h1>
+	  <p class="left">...</p>
+	  <div id="structure"></div>
+	</section>
+	<section class="intro">Alpha-NPD
+	  <div class="intro__left"><p>full atom model</p></div>
+	  <structure-view src="static/samples/a-npd.xyz"> </structure-view>
+	</section>
+	<section class="intro">CG Alpha-NPD
+	  <div class="intro__left"><p>Gay Berne</p></div>
+
+	  <structure-view src="static/samples/a-npd.xyz"
+	  		  ellipsoids="static/samples/a-npd.ell">
+	  </structure-view>
+	</section>
+	<section>
+	  <div class="intro__left"><p>VIDEOS!!</p></div>
+	  <video>
+	    <source data-src="m-mtdata2.webm" type="video/webm" />
+	  </video>
+	</section>
+	<section>	  
+	  <div class="intro__left"><p>MATH!!</p></div>
+	  <span id="katex1"></span>
+	  <script>
+	    let formula = "U_{GB}(\\sigma,\\epsilon,c) = (a^2+b^2+c^2)^3";
+	    katex.render(formula, katex1);
+	  </script>
+	</section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="build/bundle.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: false,
+      // Flags if the presentation is running in an embedded mode,
+      // i.e. contained within a limited portion of the screen
+      embedded: false,
+      // Global override for autoplaying embedded media (video/audio/iframe)
+      // - null: Media will only autoplay if data-autoplay is present
+      // - true: All media will autoplay, regardless of individual setting
+      // - false: No media will autoplay, regardless of individual setting
+      autoPlayMedia: true,
+      
+      dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+      });
+
+
+      'use strict';
+
+
+      // var xyz = [
+      // {symbol: 'N', position: [24.33500,  0.79100, -23.23000]},
+      // {symbol: 'C', position: [24.47200,  1.89700, -24.17600]},
+      // {symbol: 'C', position: [25.68200,  2.79300, -23.90000]},
+      // {symbol: 'O', position: [26.77700,  2.26500, -23.69400]},
+      // {symbol: 'C', position: [23.15400,  2.69300, -24.37100]},
+      // {symbol: 'C', position: [21.99300,  1.86500, -24.88700]},
+      // {symbol: 'C', position: [21.97000,  1.39900, -26.20000]},
+      // {symbol: 'C', position: [20.90700,  1.56500, -24.06800]},
+      // {symbol: 'C', position: [20.91000,  0.62400, -26.67700]},
+      // {symbol: 'C', position: [19.83500,  0.80100, -24.53700]},
+      // {symbol: 'C', position: [19.84000,  0.33400, -25.84400]},
+      // {symbol: 'O', position: [18.78800, -0.42000, -26.31500]},
+      // {symbol: 'N', position: [25.49100,  4.13800, -23.90300]}
+      // ];
+
+      
+      /* basic initialization */
+      var speck = document.getElementById("structure");
+      // speck.loadStructure({atoms: xyz});
+
+
+    </script>
+  </body>
+</html>

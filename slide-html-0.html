@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0</title>
+    <meta charset="utf-8"/>
+    <script src="build/bundle.js"></script>
+    <script>
+      var currSlide = Number(document.title);
+      var prevSlide = currSlide-1;
+      var nextSlide = currSlide+1;
+      var prefix = 'slide-html';
+      var maxSlide = '13';
+      window.addEventListener("keydown", function(event) {
+	  console.log('key '+event.keyCode);
+
+	  // q
+	  if (event.keyCode === 81) {
+	      var video = document.querySelector('video');
+	      console.log(video);
+	      video.style.display = 'none';
+	  }
+
+	  // v
+	  if (event.keyCode === 86) {
+	      var video = document.querySelector('video');
+	      console.log(video);
+	      video.style.display = 'block';
+	  }
+	  
+	  if (prevSlide >= 0) {
+	      var prev = prefix+'-'+prevSlide+'.html';
+	      if (event.keyCode === 37) {
+		  window.location = prev;
+	      }
+	  }
+
+	  if (nextSlide <= maxSlide) {
+	      var next = prefix+'-'+nextSlide+'.html';
+	      if (event.keyCode === 39) {
+		  window.location = next;
+	      }
+	  }
+      });
+    </script>
+    <style>
+      structure-view {
+    	  position:absolute;
+	  width:  100vw;
+	  height: 100vh;
+      }
+      video {
+    	  position:absolute;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	  border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <video autoplay loop> -->
+    <!--   <source src="../erice2018/m-mtdata2.webm" type="video/webm" /> -->
+    <!-- </video> -->
+    <!-- to disable scrollbar: add userChrome.css in -->
+    <!-- /home/matteo/.mozilla/firefox/0zw16rm2.default/chrome -->
+    <img style="width:100%;height=100%" src="slide-0.svg">
+  </body>
+</html>

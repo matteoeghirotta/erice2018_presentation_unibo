@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6</title>
+    <meta charset="utf-8"/>
+    <script>
+      var currSlide = Number(document.title);
+      var prevSlide = currSlide-1;
+      var nextSlide = currSlide+1;
+      var prefix = 'slide-html';
+      var maxSlide = '13';
+      window.addEventListener("keydown", function(event) {
+	  console.log('key '+event.keyCode);
+
+	  // q
+	  if (event.keyCode === 81) {
+	      var video = document.querySelector('video');
+	      console.log(video);
+	      video.style.display = 'none';
+	  }
+
+	  // v
+	  if (event.keyCode === 86) {
+	      var video = document.querySelector('video');
+	      console.log(video);
+	      video.style.display = 'block';
+	  }
+
+	  if (prevSlide >= 0) {
+	      var prev = prefix+'-'+prevSlide+'.html';
+	      if (event.keyCode === 37) {
+		  window.location = prev;
+	      }
+	  }
+
+	  if (nextSlide <= maxSlide) {
+	      var next = prefix+'-'+nextSlide+'.html';
+	      if (event.keyCode === 39) {
+		  window.location = next;
+	      }
+	  }
+      });
+    </script>
+    <style>
+      video {
+    	  position:absolute;
+	  display: none;	  
+	  margin-left: auto;
+	  margin-right: auto;
+	  top: 28%;
+	  width: 38%;
+	  /* border: 1px solid; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- to disable scrollbar: add userChrome.css in -->
+    <!-- /home/matteo/.mozilla/firefox/0zw16rm2.default/chrome -->
+    <video autoplay loop>
+      <source src="plotgb.webm" type="video/webm" />
+    </video>
+    <img style="width:100%;height=100%" src="slide-6.svg">
+  </body>
+</html>

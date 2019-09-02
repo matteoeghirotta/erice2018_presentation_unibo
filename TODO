@@ -1,0 +1,7 @@
+worker implemenation with emcc LAMMPS, share buffer with data and post
+message updated source:
+
+/home/matteo/Programming/Web/WebGL/WebGL-Insights/04-Getting-Serious-with-JavaScript/StructuredCloneOverhead.html
+
+generete transparent ellipsoids with vertices based on radius of
+curvature, along with normals

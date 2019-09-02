@@ -1,0 +1,8 @@
+@media print{
+    @page {
+	size: A4 landscape;
+	/* width:  50%; */
+	/* height: 50%; */
+	/* margin: 5cm; */
+    }
+}

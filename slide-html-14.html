@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>14</title>
+    <meta charset="utf-8"/>
+    <!-- <script src="build/bundle.js"></script> -->
+    <script>
+      var currSlide = Number(document.title);
+      var prevSlide = currSlide-1;
+      var nextSlide = currSlide+1;
+      var prefix = 'slide-html';
+      var maxSlide = '15';
+      window.addEventListener("keydown", function(event) {
+	  console.log('key '+event.keyCode);
+
+	  // q
+	  if (event.keyCode === 81) {
+	      var s = document.getElementById("anpd");
+	      // console.log(video);
+	      s.style.display = 'none';
+	  }
+
+	  // v
+	  if (event.keyCode === 86) {
+	      var s = document.getElementById("anpd");
+	      // console.log(video);
+	      s.style.display = 'block';
+	      // var video = document.querySelector('structure');
+	      // console.log(video);
+	      // video.style.display = 'block';
+	  }
+
+	  if (prevSlide >= 0) {
+	      var prev = prefix+'-'+prevSlide+'.html';
+	      if (event.keyCode === 37) {
+		  window.location = prev;
+	      }
+	  }
+
+	  if (nextSlide <= maxSlide) {
+	      var next = prefix+'-'+nextSlide+'.html';
+	      if (event.keyCode === 39) {
+		  window.location = next;
+	      }
+	  }
+      });
+    </script>
+    <style>
+      structure-view {
+    	  position:absolute;
+	  width:  100vw;
+	  height: 100vh;
+      }
+      video {
+    	  position:absolute;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	  left:-9%;
+	  top: 15%;
+	  /* border: 1px solid; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <structure-view id="anpd" src="static/samples/a-npd.xyz"> </structure-view> -->
+    <video autoplay loop>
+      <source src="aNPD_annealing.mp4" type="video/mp4" />
+    </video>
+
+    <!-- to disable scrollbar: add userChrome.css in -->
+    <!-- /home/matteo/.mozilla/firefox/0zw16rm2.default/chrome -->
+    <img style="width:100%;height=100%" src="slide-14.svg">
+    <!-- <script> -->
+    <!--   var speck = document.getElementById("structure"); -->
+    <!-- </script> -->
+  </body>
+</html>

@@ -1,0 +1,42 @@
+/* matteo dit that - not sure OK */
+
+@font-face {
+    font-family: 'Pragmata Pro';
+    src: url('PragmataProR_liga_0827.eot');
+    src: url('PragmataProR_liga_0827.eot?#iefix') format('embedded-opentype'),
+         url('PragmataProR_liga_0827.woff') format('woff'),
+         url('PragmataProR_liga_0827.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pragmata Pro';
+    src: url('PragmataProB_liga_0827.eot');
+    src: url('PragmataProB_liga_0827.eot?#iefix') format('embedded-opentype'),
+         url('PragmataProB_liga_0827.woff') format('woff'),
+         url('PragmataProB_liga_0827.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pragmata Pro';
+    src: url('PragmataProI_liga_0827.eot');
+    src: url('PragmataProI_liga_0827.eot?#iefix') format('embedded-opentype'),
+         url('PragmataProI_liga_0827.woff') format('woff'),
+         url('PragmataProI_liga_0827.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Pragmata Pro';
+    src: url('PragmataProZ_liga_0827.eot');
+    src: url('PragmataProZ_liga_0827.eot?#iefix') format('embedded-opentype'),
+         url('PragmataProZ_liga_0827.woff') format('woff'),
+         url('PragmataProZ_liga_0827.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
